@@ -1,8 +1,21 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+  background-color: var(--primary);
+`
 
-  h1 {
-    font-size: 2.6rem;
-  }
+export const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  max-width: 128rem;
+  margin: 0 auto;
+`
+
+export const MenuBar = styled.div`
+
+`
+
+export const SideBar = styled.div`
+
 `

@@ -1,11 +1,17 @@
 import React from 'react'
 
-import { Container } from './style'
+import Main from './../../components/Main'
+
+import { Container, Wrapper, MenuBar, SideBar } from './style'
 
 const Home: React.FC = () => {
   return (
     <Container>
-      <h1>Home</h1>
+      <Wrapper>
+        <MenuBar />
+        <Main />
+        <SideBar />
+      </Wrapper>
     </Container>
   )
 }
