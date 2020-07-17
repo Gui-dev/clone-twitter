@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Container, Banner, Avatar, ProfileData, LocationIcon, CakeIcon,
+import { Container, Banner, Avatar, ProfileData, EditButton, LocationIcon, CakeIcon,
   Followage
 } from './style'
 
@@ -12,15 +12,18 @@ const ProfilePage: React.FC = () => {
       </Banner>
 
       <ProfileData>
-        {/* <EditButton>
+        <EditButton outline>
           Editar Perfil
-        </EditButton> */}
+        </EditButton>
         <h1>Gui Silva</h1>
         <h2>@dryix</h2>
 
         <p>
-          Developer
-          <a href="https://github.com/Gui-dev" target="_blank">
+          Developer -
+          <a href="https://github.com/Gui-dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Github
           </a>
         </p>
@@ -37,8 +40,12 @@ const ProfilePage: React.FC = () => {
         </ul>
 
         <Followage>
-          <span>seguindo <strong>94</strong></span>
-          <strong>672 <span>seguidores</span></strong>
+          <span>
+            seguindo <strong>94</strong>
+          </span>
+          <span>
+            <strong>672</strong> seguidores
+          </span>
         </Followage>
       </ProfileData>
     </Container>
