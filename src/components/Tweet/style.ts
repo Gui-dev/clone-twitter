@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { RiChat4Line, RocketseatIcon, MdFavorite  } from './../../style/icons'
 
@@ -84,31 +84,92 @@ export const Dot = styled.div`
   background-color: var(--gray);
 `
 
-export const Description = styled.div`
-
+export const Description = styled.p`
+  font-size: 1.4rem;
+  margin-top: 0.4rem;
 `
 
 export const ImageContent = styled.div`
+  width: 100%;
+  height: min(28.5rem, max(17.5rem, 41vw));
+  margin-top: 1.2rem;
+  background-color: var(--outline);
+  border-radius: 1.4rem;
+  cursor: pointer;
 
+  &:hover {
+    opacity: 0.7;
+  }
 `
 
 export const Icons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 1.1rem auto 0;
 
+  > div {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  @media (min-width: 33rem) {
+    width: 63%;
+  }
 `
 
 export const Status = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  color: var(--gray);
 
+  > svg {
+    margin-right: 0.5rem;
+  }
+
+  &:nth-child(1) {
+    &, > svg path {
+      color: var(--gray);
+    }
+  }
+
+  &:nth-child(2) {
+    color: var(--retweet);
+
+    > svg path {
+      fill: var(--retweet);
+    }
+  }
+
+  &:nth-child(3) {
+    color: var(--like);
+
+    > svg path {
+      fill: var(--like);
+    }
+  }
 `
 
-export const CommentIcon = styled.div`
-
+const iconCSS = css`
+  width: 1.9rem;
+  height: 1.9rem;
 `
 
-export const RetweetIcon = styled.div`
-
+export const CommentIcon = styled(RiChat4Line)`
+  ${iconCSS};
 `
 
-export const LikeIcon = styled.div`
+export const RetweetIcon = styled(RocketseatIcon)`
+  ${iconCSS};
+`
 
+export const LikeIcon = styled(MdFavorite)`
+  ${iconCSS};
 `
 
