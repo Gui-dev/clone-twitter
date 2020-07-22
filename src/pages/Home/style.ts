@@ -12,10 +12,6 @@ export const Wrapper = styled.div`
   margin: 0 auto;
 `
 
-export const MenuBar = styled.div`
-
-`
-
 export const SideBar = styled.div`
 
 `
