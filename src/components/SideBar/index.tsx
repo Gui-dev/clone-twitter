@@ -1,8 +1,10 @@
 import React from 'react'
+import StickykBox from 'react-sticky-box'
 
 import { Container, SearchWrapper, SearchInput, SearchButton, SearchIcon, Body } from './style'
 import List from './../List'
 import FollowSuggestion from './../FollowSuggestion'
+import News from './../News'
 
 const SideBar: React.FC = () => {
   return (
@@ -14,32 +16,63 @@ const SideBar: React.FC = () => {
         </SearchButton>
       </SearchWrapper>
 
-      <Body>
-        <List
-          title="Talvez você curta"
-          elements={ [
-            <FollowSuggestion
-              name="Lucas Silva"
-              nickname="@lucas"
-            />,
-            <FollowSuggestion
-              name="Cacau Silva"
-              nickname="@cacau"
-            />,
-            <FollowSuggestion
-              name="Juliá Silva"
-              nickname="@juju"
-            />
-          ] }
-        />
+      <StickykBox>
+        <Body>
+          <List
+            title="Talvez você curta"
+            elements={ [
+              <FollowSuggestion
+                name="Lucas Silva"
+                nickname="@lucas"
+              />,
+              <FollowSuggestion
+                name="Cacau Silva"
+                nickname="@cacau"
+              />,
+              <FollowSuggestion
+                name="Juliá Silva"
+                nickname="@juju"
+              />
+            ] }
+          />
 
-        <List
-          title="Talvez você curta"
-          elements={ [
-            <h1>Test</h1>, <h1>Test</h1>, <h1>Test</h1>
-          ] }
-        />
-      </Body>
+          <List
+            title="O que está acontecendo"
+            elements={ [
+              <News />,
+              <News />,
+              <News />,
+            ] }
+          />
+
+          <List
+            title="O que está acontecendo"
+            elements={ [
+              <News />,
+              <News />,
+              <News />,
+            ] }
+          />
+
+          <List
+            title="O que está acontecendo"
+            elements={ [
+              <News />,
+              <News />,
+              <News />,
+            ] }
+          />
+
+          <List
+            title="O que está acontecendo"
+            elements={ [
+              <News />,
+              <News />,
+              <News />,
+            ] }
+          />
+        </Body>
+      </StickykBox>
     </Container>
   )
 }
