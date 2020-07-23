@@ -2,8 +2,9 @@ import React from 'react'
 
 import Main from './../../components/Main'
 import MenuBar from './../../components/MenuBar'
+import SideBar from './../../components/SideBar'
 
-import { Container, Wrapper, SideBar } from './style'
+import { Container, Wrapper } from './style'
 
 const Home: React.FC = () => {
   return (

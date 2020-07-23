@@ -11,7 +11,3 @@ export const Wrapper = styled.div`
   max-width: 128rem;
   margin: 0 auto;
 `
-
-export const SideBar = styled.div`
-
-`
